@@ -4,8 +4,8 @@
 
 ## Overview:
 - This code performs natural language processing (NLP) on a dataset of transcribed clinical notes.   
-- Two types of NLP are performed: Named Entity Recognition (NEM) and Summarization
-    - NEM extracts concepts from the notes using keywords. The MedSpaCy library includes a NEM pipeline to identify target medical conditions and medications. This process can quickly identify and flag patients with specific conditions for analysis.
+- Two types of NLP are performed: Named Entity Recognition (NER) and Summarization
+    - NER extracts concepts from the notes using keywords. The MedSpaCy library includes a NER pipeline to identify target medical conditions and medications. This process can quickly identify and flag patients with specific conditions for analysis.
     - Summarization breaks longer text down into key sentences and information. Through lemmatization, words are grouped into their lemma or dictionary form, which are then tallied. Each sentence is scored based on presence of the most frequent lemmas or key concepts.
 - The NLP library used in this code is SpaCy, with a related library, MedSpaCy:    
     - <a href="https://spacy.io/" target="_blank">SpaCy</a> is an open-sourced Python library of NLP tools 
@@ -36,9 +36,9 @@ Documentation:
 4. Extract concepts from transcribed notes using MedSpaCy Named Entity Recognition 
     1. Load the model
     2. Specify target conditions, diseases, medications, or treatments for identification
-    3. Perform NEM on a single patient's notes 
+    3. Perform NER on a single patient's notes 
         - identify target keywords, and print them to the screen  
-    4. Perform NEM on a list of patient notes 
+    4. Perform NER on a list of patient notes 
         - identify target keywords in each record and add them to a list
         - add the targets back to the patient's record in the dataframe
         - create columns to identify conditions using one-hot encoding
@@ -48,7 +48,7 @@ Documentation:
     1. Load the model
     2. Remove spaces, punctuation, and stop words from the text
     3. Count lemma frequency and identify top 5 lemmas
-    4. Count lemmas and calculate a score for each sentence
+    4. Count lemmas in each sentence and calculate a score 
     5. Create a histogram to visualize sentence score frequency
     6. Set a cutpoint score based on histogram
     7. Re-run steps 3 and 4, then add sentences with scores above the cutpoint to a new summary list 
@@ -57,17 +57,17 @@ Documentation:
     1. Load the model
     2. Remove spaces, punctuation, and stop words from the text
     3. Count lemma frequency and identify top 5 lemmas
-    4. Count lemmas and calculate a score for each sentence
+    4. Count lemmas in each sentence and calculate a score
     5. Set a cutpoint score 
     6. Re-run steps 3 and 4, then add sentences with scores above the cutpoint to a new summary list
     7. Add the summary back to the patient's record in the dataframe, and save the dataframe to an output file
 
 ## Screenshots 
 
-### NEM Example  
+### NER Example  
 ![targets](images/targets_example.png)
 
-### NEM Visualization  
+### NER Visualization  
 ![visualization](images/visualization_example.png)
 
 ### Conditions Identified & Saved to File
