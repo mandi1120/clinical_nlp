@@ -66,16 +66,16 @@ Documentation:
 
 ### NER Example  
 ![targets](images/targets_example.png)
-
+  
 ### NER Visualization  
 ![visualization](images/visualization_example.png)
-
-### Conditions Identified & Saved to File
+  
+### Conditions Identified for Each Patient & Saved to File
 ![flags](images/target_flags.png)
-
-### Conditions Chart
+  
+### Conditions Summary Chart
 ![conditions](images/conditions_chart.png)
-
+  
 ### Summarization Example
 ![summary](images/summary_example.png)
 
